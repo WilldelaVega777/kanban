@@ -1,0 +1,28 @@
+.divider
+{
+    border: 1px solid #eee
+}
+
+.header_container__div
+{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.salutation
+{
+    font-family:'Noto Sans Medium';
+    font-weight: 300;
+    color: black;
+}
+
+.date_time
+{
+    text-align: left;
+    font-size: 18pt;
+    font-weight: 100;
+    color: darkgrey;
+    width: 100%; 
+}
