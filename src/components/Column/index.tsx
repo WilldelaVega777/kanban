@@ -1,12 +1,8 @@
 import "./Column.css"
-import { useState } from "react"
+import { useState } from 'react'
+import { IColumn } from './types'
+import { ITicket } from '../Kanban/types'
 
-
-interface IColumn
-{
-    name: string;
-    content: string[];
-}
 
 const Column = ({name, content} : IColumn) => {
     // States
@@ -31,10 +27,10 @@ const Column = ({name, content} : IColumn) => {
                {content.length} Tasks
             </div>
             <div className="column_inner_container__div" onMouseEnter={columnSelected} onMouseLeave={columnDeselected}>
-                {content.map((item: string, index: number) => (
+                {content.map((ticket: ITicket) => (
                     <div className="card"
-                        key={index}>
-                        {item}
+                        key={ticket.id}>
+                        {ticket.text}
                     </div>
                 ))}
             </div>
