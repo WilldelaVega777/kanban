@@ -1,13 +1,12 @@
 export interface IKanbanProps
 {
-    backlogData: ITicket[]
-    progressData: ITicket[]
-    QAData: ITicket[]
-    doneData: ITicket[]
+    data: ITicket[]
 }
 
 export interface ITicket
 {
     id: number
-    text: string
+    text: string,
+    column: number,
+    priority: number
 }

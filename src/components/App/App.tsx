@@ -3,22 +3,14 @@ import Header from "../Header/Header"
 import Kanban from "../Kanban"
 import './App.css'
 
-import { backlogData } from '../../data/tickets'
-import { progressData } from '../../data/tickets'
-import { QAData } from '../../data/tickets'
-import { doneData } from '../../data/tickets'
+import { kanbanData } from '../../data/tickets'
 
 function App() {
   return (
     <div className="App">
       <div className="main_container__div">
         <Header user="Jacob"/>
-        <Kanban
-          backlogData={backlogData}
-          progressData={progressData}
-          QAData={QAData}
-          doneData={doneData}
-        />
+        <Kanban data={kanbanData}/>
       </div>
     </div>
   )
