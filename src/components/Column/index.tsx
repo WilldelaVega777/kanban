@@ -2,19 +2,32 @@ import "./Column.css"
 import { useState } from 'react'
 import { IColumn } from './types'
 import { ITicket } from '../Kanban/types'
+import Card from "../Card"
+import { useDispatch } from 'react-redux'
+import { select } from '../../redux/selectors/kanban'
 
 
 const Column = ({name, content} : IColumn) => {
+    // Constants
+    const dispatch = useDispatch()
+
     // States
     const [visibleChevrons, setVisibleChevrons] = useState(false)
 
     // Events
     const columnSelected = () => {
-        setVisibleChevrons(true)
+        if (content.length > 0)
+        {
+            setVisibleChevrons(true)
+        }
     }
 
     const columnDeselected = () => {
         setVisibleChevrons(false)
+    }
+
+    const selectTicket = (pId: number) => {
+        dispatch(select(pId))
     }
 
     // JSX
@@ -24,14 +37,20 @@ const Column = ({name, content} : IColumn) => {
                 {name}
             </div>
             <div className="tasks">
-               {content.length} Tasks
+                {content.length} Tasks
             </div>
-            <div className="column_inner_container__div" onMouseEnter={columnSelected} onMouseLeave={columnDeselected}>
+            <div className="column_inner_container__div" 
+                onMouseEnter={columnSelected} 
+                onMouseLeave={columnDeselected}
+            >
                 {content.map((ticket: ITicket) => (
-                    <div className="card"
-                        key={ticket.id}>
-                        {ticket.text}
-                    </div>
+                    <Card
+                        id={ticket.id}
+                        content={ticket.text}
+                        priority={ticket.priority}
+                        selected={ticket.selected}
+                        selectTicket={selectTicket}
+                    />
                 ))}
             </div>
             <div className={'chevron_container ' + (visibleChevrons ? 'show-chevrons' : 'hide-chevrons')}

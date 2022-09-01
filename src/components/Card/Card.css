@@ -1,0 +1,34 @@
+.card
+{
+    width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.selected
+{
+    background-color: #444 !important;
+    color: yellow !important;
+}
+
+.priority-low
+{
+    background-color: #0984e3;
+    color: white;
+}
+
+.priority-mid
+{
+    background-color: #e17055;
+    color: white;
+}
+
+.priority-high
+{
+    background-color: #b71540;
+    color: white;
+}
