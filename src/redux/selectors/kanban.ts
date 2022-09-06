@@ -1,5 +1,6 @@
 import { createSlice, Slice } from '@reduxjs/toolkit'
 import { ITicket } from '../../components/Kanban/types'
+import { IColumnChangeParams } from '../../components/Kanban/types'
 
 export interface IMasterState
 {
@@ -18,7 +19,7 @@ export const kanbanSlice: Slice<IKanbanState> = createSlice({
   },
   reducers: {
     update: (state, action) => {
-        state.tickets = [...action.payload as ITicket[]]
+      state.tickets = [...action.payload as ITicket[]]
     },
     select: (state, action) => {
       state.tickets.forEach((ticket: ITicket) => {
@@ -33,7 +34,12 @@ export const kanbanSlice: Slice<IKanbanState> = createSlice({
       })
     },
     move: (state, action) => {
-      state.tickets = action.payload
+      state.tickets.forEach((ticket: ITicket) => {
+        if (ticket.id === (action.payload as IColumnChangeParams).id)
+        {
+          ticket.column = (action.payload as IColumnChangeParams).column
+        }
+      })
     }
   }
 })

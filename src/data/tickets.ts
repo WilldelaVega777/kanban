@@ -1,6 +1,7 @@
 export const kanbanData = [
     {
         id: 1,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 1',
         column: 1,
         priority: 'low',
@@ -8,6 +9,7 @@ export const kanbanData = [
     },
     {
         id: 2,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 2',
         column: 1,
         priority: 'mid',
@@ -15,6 +17,7 @@ export const kanbanData = [
     },
     {
         id: 3,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 3',
         column: 1,
         priority: 'high',
@@ -22,6 +25,7 @@ export const kanbanData = [
     },
     {
         id: 4,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 4',
         column: 1,
         priority: 'low',
@@ -29,6 +33,7 @@ export const kanbanData = [
     },
     {
         id: 5,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 1',
         column: 2,
         priority: 'low',
@@ -36,6 +41,7 @@ export const kanbanData = [
     },
     {
         id: 6,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 2',
         column: 2,
         priority: 'high',
@@ -43,6 +49,7 @@ export const kanbanData = [
     },
     {
         id: 7,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 3',
         column: 2,
         priority: 'mid',
@@ -50,6 +57,7 @@ export const kanbanData = [
     },
     {
         id: 8,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 4',
         column: 2,
         priority: 'mid',
@@ -57,6 +65,7 @@ export const kanbanData = [
     },
     {
         id: 9,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 1',
         column: 2,
         priority: 'low',
@@ -64,6 +73,7 @@ export const kanbanData = [
     },
     {
         id: 10,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 2',
         column: 3,
         priority: 'high',
@@ -71,6 +81,7 @@ export const kanbanData = [
     },
     {
         id: 11,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 3',
         column: 3,
         priority: 'low',
@@ -78,6 +89,7 @@ export const kanbanData = [
     },
     {
         id: 12,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 4',
         column: 3,
         priority: 'mid',
@@ -85,6 +97,7 @@ export const kanbanData = [
     },
     {
         id: 13,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 1',
         column: 3,
         priority: 'low',
@@ -92,6 +105,7 @@ export const kanbanData = [
     },
     {
         id: 14,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 2',
         column: 4,
         priority: 'low',
@@ -99,6 +113,7 @@ export const kanbanData = [
     },
     {
         id: 15,
+        userId: 1,
         text: 'Appointments are not showing up in the itinerary for the departure date. Confirm that the asignee can see all activities # 3',
         column: 4,
         priority: 'mid',

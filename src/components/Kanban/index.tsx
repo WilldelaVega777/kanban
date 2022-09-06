@@ -7,16 +7,16 @@ import { Columns } from '../../constants'
 const Kanban: React.FC<IKanbanProps> = ({data}: IKanbanProps) => {
     return (
         <div className="kanban_main_container__div">
-            <Column name="Backlog" content={data? data.filter((ticket) => {
+            <Column id={Columns.Backlog} name="Backlog" content={data? data.filter((ticket) => {
                 return ticket.column === Columns.Backlog
             }): []}/>
-            <Column name="In Progress" content={data? data.filter((ticket) => {
+            <Column id={Columns.Progress} name="In Progress" content={data? data.filter((ticket) => {
                 return ticket.column === Columns.Progress
             }): []}/>
-            <Column name="QA" content={data? data.filter((ticket) => {
+            <Column id={Columns.QA} name="QA" content={data? data.filter((ticket) => {
                 return ticket.column === Columns.QA
             }): []}/>
-            <Column name="Done" content={data? data.filter((ticket) => {
+            <Column id={Columns.Done} name="Done" content={data? data.filter((ticket) => {
                 return ticket.column === Columns.Done
             }): []}/>
         </div>

@@ -5,3 +5,4 @@ export enum Columns {
     Done
 }
 
+export const MAX_COLUMN = 5
